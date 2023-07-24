@@ -11,3 +11,7 @@ pub fn print_pass(name: &str, link: &str) {
 pub fn print_module_name(name: &str) {
     println!("{}", format!("{}:", name).bold().black().on_white().underline());
 }
+
+pub fn clear_terminal() {
+    print!("\x1B[2J\x1B[1;1H");
+}
