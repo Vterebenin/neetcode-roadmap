@@ -2,6 +2,7 @@ pub mod check_duplicate;
 pub mod valid_anagram;
 pub mod two_sum;
 pub mod group_anagram;
+pub mod top_k_frequent_elements;
 
 use crate::utils::print_module_name;
 const MODULE_NAME: &str = "Arrays and hashing";
@@ -11,4 +12,5 @@ pub fn main() {
     valid_anagram::main();
     two_sum::main();
     group_anagram::main();
+    top_k_frequent_elements::main();
 }
