@@ -1,10 +1,8 @@
-use std::collections::HashMap;
-
 use crate::utils::print_pass;
 
 const NAME: &str = "two-sum-ii-input-array-is-sorted";
 const LINK: &str = "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/";
-fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
+fn two_sum(numbers: Vec<i32>, target: i32) -> Vec<i32> {
     let mut left = 0;
     let mut right = numbers.len() - 1;
     loop {
