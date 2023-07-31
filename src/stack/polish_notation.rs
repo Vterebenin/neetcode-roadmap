@@ -4,26 +4,23 @@ const NAME: &str = "evaluate-reverse-polish-notation";
 const LINK: &str = "https://leetcode.com/problems/evaluate-reverse-polish-notation/";
 
 fn eval_rpn(tokens: Vec<String>) -> i32 {
-    let mut stack = vec![];
-    for token in tokens.iter() {
-        match token.as_str() {
-            "+"|"-"|"*"|"/" => {
-                if stack.len() < 2 { continue; }
-                let last: i32 = stack.pop().unwrap();
-                let previous: i32 = stack.pop().unwrap();
-                let result = match token.as_str() {
-                    "+" => last + previous,
-                    "-" => previous - last,
-                    "*" => last * previous,
-                    "/" => previous / last,
-                    _ => 0,
-                };
-                stack.push(result);
-            },
-            _ => stack.push(token.parse::<i32>().unwrap()),
+    let mut stack = Vec::new();
+    for s in tokens.iter() {
+        if let Ok(x) = s.parse::<i32>() {
+            stack.push(x);
+            continue;
         }
-    };
-    *stack.first().unwrap()
+        let b = stack.pop().unwrap();
+        let a = stack.pop().unwrap();
+        stack.push(match s.as_str() {
+            "+" => a + b,
+            "-" => a - b,
+            "*" => a * b,
+            "/" => a / b,
+            what => panic!("What's this '{}'", what),
+        });
+    }
+    stack.pop().unwrap()
 }
 
 pub fn main() {
