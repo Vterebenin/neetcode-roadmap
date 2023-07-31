@@ -25,7 +25,6 @@ impl MinStack {
         self.stack.push(val);
         let last_min = self.min_stack.last().unwrap_or(&val);
         self.min_stack.push(val.min(*last_min));
-        println!("{:#?}", self.min_stack);
     }
     
     fn pop(&mut self) {
