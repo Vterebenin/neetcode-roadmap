@@ -1,5 +1,4 @@
 use crate::utils::print_pass;
-use std::cmp::Ordering;
 
 const NAME: &str = "search-in-rotated-sorted-array";
 const LINK: &str = "https://leetcode.com/problems/search-in-rotated-sorted-array/";
