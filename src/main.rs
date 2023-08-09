@@ -3,6 +3,7 @@ mod two_pointers;
 mod stack;
 mod binary_search;
 mod sliding_window;
+mod linked_lists;
 mod utils;
 use crate::utils::clear_terminal;
 
@@ -13,4 +14,5 @@ fn main() {
     stack::main();
     binary_search::main();
     sliding_window::main();
+    linked_lists::main();
 }
