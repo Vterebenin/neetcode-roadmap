@@ -27,23 +27,24 @@ impl ListNode {
     }
 }
 pub fn remove_nth_from_end(head: Option<Box<ListNode>>, n: i32) -> Option<Box<ListNode>> {
-    let mut tail = head.clone();
-    let mut curr = tail.as_mut();
-    for i in 0..n {
-        if curr.is_some() {
-            curr = curr.next;
-        }
+    let mut dummy = Box::new(ListNode::new(0));
+    dummy.next = head;
+    let mut fast = dummy.clone();
+    let mut slow =  dummy.as_mut();
+    for _ in 0..n {
+        fast = fast.next.unwrap();
     }
-    tail
+
+    while fast.next.is_some() {
+        fast = fast.next.unwrap();
+        slow = slow.next.as_mut().unwrap();
+    }
+    let next = slow.next.as_mut().unwrap();
+    slow.next = next.next.clone();
+    dummy.next
 }
 
 pub fn main() {
-    let mut list1 = Some(Box::new(ListNode::new(5)));
-    list1 = Some(Box::new(list1.unwrap().push_left(3)));
-
-    let mut list2 = Some(Box::new(ListNode::new(4)));
-    list2 = Some(Box::new(list2.unwrap().push_left(1)));
-
     let mut list1 = Some(Box::new(ListNode::new(5)));
     list1 = Some(Box::new(list1.unwrap().push_left(4)));
     list1 = Some(Box::new(list1.unwrap().push_left(3)));
@@ -51,6 +52,6 @@ pub fn main() {
     let mut answer = Some(Box::new(ListNode::new(5)));
     answer = Some(Box::new(answer.unwrap().push_left(4)));
     answer = Some(Box::new(answer.unwrap().push_left(1)));
-    assert_eq!(remove_nth_from_end(list1, 1), answer);
+    assert_eq!(remove_nth_from_end(list1, 3), answer);
     print_pass(NAME, LINK)
 }

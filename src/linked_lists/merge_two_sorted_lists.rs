@@ -26,15 +26,22 @@ impl ListNode {
         }
     }
 }
-pub fn merge_two_lists(mut l1: Option<Box<ListNode>>, mut l2: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
-    let mut r = &mut l1;
-    while l2.is_some() {
-        if r.is_none() || l2.as_ref()?.val < r.as_ref()?.val {
-            std::mem::swap(r, &mut l2);
+pub fn merge_two_lists(mut list1: Option<Box<ListNode>>, mut list2: Option<Box<ListNode>>) -> Option<Box<ListNode>>{
+    let mut prehead = ListNode::new(0);
+    let mut cur_node = &mut prehead;
+    while let (Some(node1), Some(node2)) = (&list1, &list2) {
+        if node1.val < node2.val {
+            cur_node.next = list1.take();
+            cur_node = cur_node.next.as_mut().unwrap();
+            list1 = cur_node.next.take();
+        } else {
+            cur_node.next = list2.take();
+            cur_node = cur_node.next.as_mut().unwrap();
+            list2 = cur_node.next.take();
         }
-        r = &mut r.as_mut()?.next;
     }
-    l1
+    cur_node.next = list1.or(list2);
+    prehead.next
 }
 
 pub fn main() {
