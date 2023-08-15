@@ -45,7 +45,6 @@ pub fn reorder_list(head: &mut Option<Box<ListNode>>){
             x.next = t;
             x
         });
-        println!("{:?}", h);
         let node = new_tail.insert(h.take().unwrap());
         if node.next.is_some() {
             new_tail = &mut node.next.as_mut().unwrap().next;
