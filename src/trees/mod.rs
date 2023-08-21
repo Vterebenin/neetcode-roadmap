@@ -4,6 +4,7 @@ mod diametr;
 mod balanced;
 mod is_same_tree;
 mod lca_binary_tree;
+mod subtree;
 
 use crate::utils::print_module_name;
 const MODULE_NAME: &str = "Trees";
@@ -16,4 +17,5 @@ pub fn main() {
     balanced::main();
     is_same_tree::main();
     lca_binary_tree::main();
+    subtree::main();
 }
