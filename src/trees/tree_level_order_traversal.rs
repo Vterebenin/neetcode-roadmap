@@ -25,21 +25,21 @@ impl TreeNode {
 }
 type TreeNodeType = Option<Rc<RefCell<TreeNode>>>;
 pub fn level_order(root: TreeNodeType) -> Vec<Vec<i32>> {
-    if !root.is_some() { return vec![] };
+    let mut q = VecDeque::new();
+    if let Some(r) = root {
+        q.push_back(r);
+    }
     let mut levels: Vec<Vec<i32>> = vec![];
-    let mut q: VecDeque<TreeNodeType> = VecDeque::from([root]);
     while !q.is_empty() {
         let mut level = vec![];
         for _ in 0..q.len() {
             if let Some(curr) = q.pop_front() {
-                if let Some(n)= curr {
-                    level.push(n.borrow().val);
-                    if n.borrow().left.is_some() {
-                        q.push_back(n.borrow().left.clone());
-                    }
-                    if n.borrow().right.is_some() {
-                        q.push_back(n.borrow().right.clone());
-                    }
+                level.push(curr.borrow().val);
+                if let Some(l) = curr.borrow_mut().left.take() {
+                    q.push_back(l);
+                }
+                if let Some(r) = curr.borrow_mut().right.take() {
+                    q.push_back(r);
                 }
             }
         }
