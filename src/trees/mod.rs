@@ -6,6 +6,7 @@ mod is_same_tree;
 mod lca_binary_tree;
 mod subtree;
 mod tree_level_order_traversal;
+mod right_side;
 
 use crate::utils::print_module_name;
 const MODULE_NAME: &str = "Trees";
@@ -20,4 +21,5 @@ pub fn main() {
     lca_binary_tree::main();
     subtree::main();
     tree_level_order_traversal::main();
+    right_side::main();
 }
