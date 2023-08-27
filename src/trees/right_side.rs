@@ -32,19 +32,20 @@ pub fn right_side_view(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<i32> {
     }
     let mut right_side_items: Vec<i32> = vec![];
     while !q.is_empty() {
-        let mut level = vec![];
-        for _ in 0..q.len() {
+        let q_size = q.len();
+        for index in 0..q_size {
             if let Some(curr) = q.pop_front() {
-                level.push(curr.borrow().val);
                 if let Some(l) = curr.borrow_mut().left.take() {
                     q.push_back(l);
                 }
                 if let Some(r) = curr.borrow_mut().right.take() {
                     q.push_back(r);
                 }
+                if index == q_size - 1 {
+                    right_side_items.push(curr.borrow().val);
+                }
             }
         }
-        right_side_items.push(level.last().unwrap().to_owned());
     }
     right_side_items
 }

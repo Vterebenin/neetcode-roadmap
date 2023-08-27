@@ -6,6 +6,8 @@ mod sliding_window;
 mod linked_lists;
 mod utils;
 mod trees;
+mod backtracking;
+
 
 use crate::utils::clear_terminal;
 
@@ -18,4 +20,5 @@ fn main() {
     sliding_window::main();
     linked_lists::main();
     trees::main();
+    backtracking::main();
 }
