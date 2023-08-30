@@ -7,6 +7,7 @@ mod linked_lists;
 mod utils;
 mod trees;
 mod backtracking;
+mod heap_prio_queue;
 
 
 use crate::utils::clear_terminal;
@@ -21,4 +22,5 @@ fn main() {
     linked_lists::main();
     trees::main();
     backtracking::main();
+    heap_prio_queue::main();
 }
