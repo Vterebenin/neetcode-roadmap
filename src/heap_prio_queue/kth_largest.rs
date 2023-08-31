@@ -22,7 +22,6 @@ impl KthLargest {
         let size = k as usize;
         let mut heap = BinaryHeap::with_capacity(size + 1);
         for n in nums { 
-            println!("{:?}", heap);
             heap.push(Reverse(n));
             if heap.len() > size {
                 heap.pop();
