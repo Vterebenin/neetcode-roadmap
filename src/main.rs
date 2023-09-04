@@ -8,6 +8,7 @@ mod utils;
 mod trees;
 mod backtracking;
 mod heap_prio_queue;
+mod tries;
 
 
 use crate::utils::clear_terminal;
@@ -23,4 +24,5 @@ fn main() {
     trees::main();
     backtracking::main();
     heap_prio_queue::main();
+    tries::main();
 }
