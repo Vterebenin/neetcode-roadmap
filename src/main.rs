@@ -9,6 +9,7 @@ mod trees;
 mod backtracking;
 mod heap_prio_queue;
 mod tries;
+mod graphs;
 
 
 use crate::utils::clear_terminal;
@@ -25,4 +26,5 @@ fn main() {
     backtracking::main();
     heap_prio_queue::main();
     tries::main();
+    graphs::main();
 }
