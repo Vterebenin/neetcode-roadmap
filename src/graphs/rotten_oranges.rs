@@ -25,7 +25,7 @@ pub fn oranges_rotting(mut grid: Vec<Vec<i32>>) -> i32 {
 
     let dir: Vec<Vec<i32>> = vec![vec![0, 1], vec![0, -1], vec![1, 0], vec![-1, 0]];
     while !q.is_empty() && fresh > 0 {
-        for i in 0..q.len() {
+        for _i in 0..q.len() {
             if let Some((r, c)) = q.pop_front() {
                 for d in dir.iter() {
                     let row = d[0] + r as i32;

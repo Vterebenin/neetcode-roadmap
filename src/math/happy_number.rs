@@ -4,12 +4,10 @@ const NAME: &str = "happy-number";
 const LINK: &str = "https://leetcode.com/problems/happy-number/";
 
 pub fn is_happy(n: i32) -> bool {
+    if n == 1 { return true; }
     let mut number = n;
     let mut previous = vec![];
     while number != 1 && !previous.contains(&number) {
-        if number == 1 {
-            return true;
-        }
         previous.push(number);
         number = number.to_string()
             .chars()
@@ -20,6 +18,9 @@ pub fn is_happy(n: i32) -> bool {
                 acc += e*e;
                 acc
             });
+        if number == 1 {
+            return true;
+        }
     }
     false
 }
