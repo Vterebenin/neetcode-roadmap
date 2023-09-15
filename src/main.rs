@@ -12,6 +12,8 @@ mod tries;
 mod graphs;
 mod math;
 mod lru;
+mod dynamic_one;
+mod bitwise_operations;
 
 
 use crate::utils::clear_terminal;
@@ -31,4 +33,6 @@ fn main() {
     graphs::main();
     math::main();
     lru::main();
+    dynamic_one::main();
+    bitwise_operations::main();
 }
