@@ -1,19 +1,10 @@
 use crate::utils::print_pass;
 
-const NAME: &str = "binary-search";
-const LINK: &str = "https://leetcode.com/problems/binary-search/";
+const NAME: &str = "reverse-bits";
+const LINK: &str = "https://leetcode.com/problems/reverse-bits/";
 
-pub fn reverse_bits(mut x: u32) -> u32 {
-    let mut result = 0;
-    let mut bit_position = 31;
-
-    while x != 0 {
-        println!("{}", format!("{:b}", x));
-        result |= (x & 1) << bit_position;
-        x >>= 1;
-        bit_position -= 1;
-    }
-    result
+pub fn reverse_bits(x: u32) -> u32 {
+    x.reverse_bits()
 }
 
 pub fn main() {
