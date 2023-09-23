@@ -5,6 +5,7 @@ pub mod group_anagram;
 pub mod top_k_frequent_elements;
 pub mod product_of_array_except_self;
 mod longest_consecutive_sequence;
+mod valid_sudoku;
 
 use crate::utils::print_module_name;
 const MODULE_NAME: &str = "Arrays and hashing";
@@ -18,4 +19,5 @@ pub fn main() {
     top_k_frequent_elements::main();
     product_of_array_except_self::main();
     longest_consecutive_sequence::main();
+    valid_sudoku::main();
 }
