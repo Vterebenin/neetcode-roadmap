@@ -2,8 +2,8 @@ use std::collections::HashMap;
 
 use crate::utils::print_pass;
 
-const NAME: &str = "min-cost-climbing-stairs";
-const LINK: &str = "https://leetcode.com/problems/min-cost-climbing-stairs/";
+const NAME: &str = "target-sum";
+const LINK: &str = "https://leetcode.com/problems/target-sum/";
 
 pub fn find_target_sum_ways(nums: Vec<i32>, target: i32) -> i32 {
     let mut dp: HashMap<(i32, i32), i32> = HashMap::new();
@@ -20,7 +20,6 @@ pub fn find_target_sum_ways(nums: Vec<i32>, target: i32) -> i32 {
             return *dp.get(&(i, total)).unwrap();
         }
         let result = backtrack(i + 1, total + nums[curr], nums, target, dp) + backtrack(i + 1, total - nums[curr], nums, target, dp);
-        println!("{} {:?} {}", result, dp, i);
         dp
             .insert(
                 (i, total),

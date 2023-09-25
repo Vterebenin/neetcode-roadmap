@@ -7,6 +7,8 @@ pub fn unique_paths(m: i32, n: i32) -> i32 {
     let m = m as usize;
     let n = n as usize;
     let mut table = vec![vec![0; n + 1]; m + 1];
+    let mut prev1 = 0;
+    let mut prev2 = 0;
     table[1][1] = 1;
     for i in 0..=m {
         for j in 0..=n {
