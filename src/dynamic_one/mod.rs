@@ -6,6 +6,7 @@ mod unique_paths;
 mod find_target_sum_ways;
 mod rob;
 mod longest_palindromic_substring;
+mod coin_change;
 
 use crate::utils::print_module_name;
 const MODULE_NAME: &str = "1D - dynamic programming";
@@ -20,4 +21,5 @@ pub fn main() {
     find_target_sum_ways::main();
     rob::main();
     longest_palindromic_substring::main();
+    coin_change::main();
 }

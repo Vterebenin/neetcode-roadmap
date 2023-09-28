@@ -30,7 +30,6 @@ pub fn longest_palindrome(s: String) -> String {
             }
         }
     }
-    println!("{:?}", f);
     s[start..start + longest].to_string()
 }
 
