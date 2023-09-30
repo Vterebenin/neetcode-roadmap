@@ -7,6 +7,7 @@ mod find_target_sum_ways;
 mod rob;
 mod longest_palindromic_substring;
 mod coin_change;
+mod longest_increasing_subsequence;
 
 use crate::utils::print_module_name;
 const MODULE_NAME: &str = "1D - dynamic programming";
@@ -22,4 +23,5 @@ pub fn main() {
     rob::main();
     longest_palindromic_substring::main();
     coin_change::main();
+    longest_increasing_subsequence::main();
 }
