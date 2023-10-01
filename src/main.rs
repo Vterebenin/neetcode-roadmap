@@ -14,6 +14,7 @@ mod math;
 mod lru;
 mod dynamic_one;
 mod bitwise_operations;
+mod intervals;
 
 
 use crate::utils::clear_terminal;
@@ -35,4 +36,5 @@ fn main() {
     lru::main();
     dynamic_one::main();
     bitwise_operations::main();
+    intervals::main();
 }

@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
-const NAME: &str = "happy-number";
-const LINK: &str = "https://leetcode.com/problems/happy-number/";
+const NAME: &str = "plus-one";
+const LINK: &str = "https://leetcode.com/problems/plus-one/";
 
 pub fn plus_one(mut digits: Vec<i32>) -> Vec<i32> {
     for x in digits.iter_mut().rev() {
