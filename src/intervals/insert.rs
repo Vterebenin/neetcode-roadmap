@@ -47,7 +47,6 @@ pub fn insert(mut intervals: Vec<Vec<i32>>, new_interval: Vec<i32>) -> Vec<Vec<i
         return intervals;
     }
     copy.insert(insert_in, vec![min, max]);
-    println!("{} {}", min, max);
     copy
 }
 
