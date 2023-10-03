@@ -15,7 +15,10 @@ mod lru;
 mod dynamic_one;
 mod bitwise_operations;
 mod intervals;
+mod greedy;
 
+
+use utils::print_total;
 
 use crate::utils::clear_terminal;
 
@@ -37,4 +40,6 @@ fn main() {
     dynamic_one::main();
     bitwise_operations::main();
     intervals::main();
+    greedy::main();
+    print_total();
 }
