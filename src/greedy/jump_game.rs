@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
-const NAME: &str = "maximum-subarray";
-const LINK: &str = "https://leetcode.com/problems/maximum-subarray/";
+const NAME: &str = "jump-game";
+const LINK: &str = "https://leetcode.com/problems/jump-game/";
 
 pub fn can_jump(nums: Vec<i32>) -> bool {
     let mut max_val: i32 = 0;
