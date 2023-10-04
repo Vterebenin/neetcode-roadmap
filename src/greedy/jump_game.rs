@@ -4,11 +4,15 @@ const NAME: &str = "maximum-subarray";
 const LINK: &str = "https://leetcode.com/problems/maximum-subarray/";
 
 pub fn can_jump(nums: Vec<i32>) -> bool {
-    let mut n = 1;
-    for i in (0..nums.len() - 1).rev() {
-        n = if nums[i] < n { n + 1 } else { 1 };
+    let mut max_val: i32 = 0;
+
+    for (idx, val) in nums.iter().enumerate() {
+        if idx as i32 > max_val {
+            return false;
+        }
+        max_val = max_val.max((idx as i32 + *val as i32) as i32);
     }
-    n == 1
+    return true
 }
 
 pub fn main() {
