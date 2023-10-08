@@ -2,6 +2,7 @@ mod maximum_subarray;
 mod jump_game;
 mod jump_game_two;
 mod merge_triplets;
+mod hand_of_straight;
 
 use crate::utils::print_module_name;
 const MODULE_NAME: &str = "Greedy";
@@ -12,4 +13,5 @@ pub fn main() {
     jump_game::main();
     jump_game_two::main();
     merge_triplets::main();
+    hand_of_straight::main();
 }
