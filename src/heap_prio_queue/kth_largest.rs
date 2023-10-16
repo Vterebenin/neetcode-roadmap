@@ -1,60 +1,29 @@
 use crate::utils::print_pass;
 use std::collections::BinaryHeap;
-use std::cmp::Reverse;
 
-const NAME: &str = "kth-largest-element-in-a-stream";
-const LINK: &str = "https://leetcode.com/problems/kth-largest-element-in-a-stream/";
+const NAME: &str = "k-closest-points-to-origin";
+const LINK: &str = "https://leetcode.com/problems/k-closest-points-to-origin/";
 
 
-pub struct KthLargest {
-    size: usize,
-    heap: BinaryHeap<Reverse<i32>>
+// in rust you could just select nth unstable
+pub fn find_kth_largest(nums: Vec<i32>, k: i32) -> i32 {
+    let mut k = k as usize;
+    let mut pq = BinaryHeap::from(nums);
+    let mut response = 0;
+    while k > 0 {
+        if let Some(p) = pq.pop() {
+            response = p;
+        }
+        k -= 1;
+    }
+    // let n = nums.len();
+    // *nums.select_nth_unstable(n - k as usize).1
+    response
 }
 
-
-/** 
- * `&self` means the method takes an immutable reference.
- * If you need a mutable reference, change it to `&mut self` instead.
- */
-impl KthLargest {
-
-    fn new(k: i32, nums: Vec<i32>) -> Self {
-        let size = k as usize;
-        let mut heap = BinaryHeap::with_capacity(size + 1);
-        for n in nums { 
-            heap.push(Reverse(n));
-            if heap.len() > size {
-                heap.pop();
-            }
-        }
-        Self { 
-            size, 
-            heap,
-        }
-    }
-    
-    fn add(&mut self, val: i32) -> i32 {
-        self.heap.push(Reverse(val));
-        if self.heap.len() > self.size {
-            self.heap.pop();
-        }
-        self.heap.peek().unwrap().0
-    }
-}
-
-/**
- * Your KthLargest object will be instantiated and called as such:
- * let obj = KthLargest::new(k, nums);
- * let ret_1: i32 = obj.add(val);
- */
 pub fn main() {
-    let nums = vec![4, 5, 8, 2];
-    let k = 3;
-    let mut obj = KthLargest::new(k, nums);
-    assert_eq!(obj.add(3), 4);
-    assert_eq!(obj.add(5), 5);
-    assert_eq!(obj.add(10), 5);
-    assert_eq!(obj.add(9), 8);
-    assert_eq!(obj.add(4), 8);
-    print_pass(NAME, LINK)
+    let nums = vec![3,2,1,5,6,4];
+    let k = 2;
+    assert_eq!(find_kth_largest(nums, k), 5);
+    print_pass(NAME, LINK);
 }
