@@ -3,6 +3,7 @@ mod permutations;
 mod subsets2;
 mod word_search;
 mod combination_sum;
+mod combination_sum_two;
 
 use crate::utils::print_module_name;
 
@@ -14,5 +15,6 @@ pub fn main() {
     permutations::main();
     subsets2::main();
     word_search::main();
-    combination_sum::main()
+    combination_sum::main();
+    combination_sum_two::main();
 }
