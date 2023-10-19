@@ -2,6 +2,7 @@ mod happy_number;
 mod plus_one;
 mod rotate_image;
 mod spiral_matrix;
+mod set_zeros;
 
 use crate::utils::print_module_name;
 
@@ -13,4 +14,5 @@ pub fn main() {
     plus_one::main();
     rotate_image::main();
     spiral_matrix::main();
+    set_zeros::main();
 }

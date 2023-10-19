@@ -45,10 +45,8 @@ fn dfs(
     }
     for i in 0..chars.len() {
         let items = phone_items.get(&chars[i]).unwrap();
-        println!("{:?}", items.clone());
         for item in items {
             buffer.push(item.to_owned());
-            println!("{:?}", buffer);
             dfs(chars[i + 1..].to_vec(), result, buffer, phone_items, size);
             buffer.pop();
         }
