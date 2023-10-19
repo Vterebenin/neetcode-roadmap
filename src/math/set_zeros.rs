@@ -1,5 +1,3 @@
-use std::collections::HashSet;
-
 use crate::utils::print_pass;
 
 const NAME: &str = "rotate-image";

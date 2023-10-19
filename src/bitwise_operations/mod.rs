@@ -3,6 +3,7 @@ mod number_of_one_bits;
 mod single_number;
 mod missing_number;
 mod counting_bits;
+mod get_sum;
 
 use crate::utils::print_module_name;
 const MODULE_NAME: &str = "Bitwise operations";
@@ -14,4 +15,5 @@ pub fn main() {
     single_number::main();
     missing_number::main();
     counting_bits::main();
+    get_sum::main();
 }
