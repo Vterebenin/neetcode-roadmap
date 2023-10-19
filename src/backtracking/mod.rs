@@ -4,6 +4,7 @@ mod subsets2;
 mod word_search;
 mod combination_sum;
 mod combination_sum_two;
+mod letter_combination;
 
 use crate::utils::print_module_name;
 
@@ -17,4 +18,5 @@ pub fn main() {
     word_search::main();
     combination_sum::main();
     combination_sum_two::main();
+    letter_combination::main();
 }
