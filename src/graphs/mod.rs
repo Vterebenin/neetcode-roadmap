@@ -3,6 +3,7 @@ mod max_area_island;
 mod surrounded_regions;
 mod rotten_oranges;
 mod course_schedule;
+mod redundant_connections;
 
 use crate::utils::print_module_name;
 const MODULE_NAME: &str = "Graphs";
@@ -14,4 +15,5 @@ pub fn main() {
     surrounded_regions::main();
     rotten_oranges::main();
     course_schedule::main();
+    redundant_connections::main();
 }
