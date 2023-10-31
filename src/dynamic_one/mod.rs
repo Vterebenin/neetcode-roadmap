@@ -11,6 +11,7 @@ mod longest_increasing_subsequence;
 mod partition_equal_subset_sum;
 mod count_substrings;
 mod coin_change_two;
+mod string_relation;
 
 use crate::utils::print_module_name;
 const MODULE_NAME: &str = "1D - dynamic programming";
@@ -30,4 +31,5 @@ pub fn main() {
     partition_equal_subset_sum::main();
     count_substrings::main();
     coin_change_two::main();
+    string_relation::main();
 }
