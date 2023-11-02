@@ -12,6 +12,7 @@ mod partition_equal_subset_sum;
 mod count_substrings;
 mod coin_change_two;
 mod string_relation;
+mod longest_common_suqsequence;
 
 use crate::utils::print_module_name;
 const MODULE_NAME: &str = "1D - dynamic programming";
@@ -32,4 +33,5 @@ pub fn main() {
     count_substrings::main();
     coin_change_two::main();
     string_relation::main();
+    longest_common_suqsequence::main();
 }
