@@ -13,9 +13,10 @@ mod count_substrings;
 mod coin_change_two;
 mod string_relation;
 mod longest_common_suqsequence;
+mod maximum_product_subarray;
 
 use crate::utils::print_module_name;
-const MODULE_NAME: &str = "1D - dynamic programming";
+const MODULE_NAME: &str = "Dynamic programming";
 
 pub fn main() {
     print_module_name(MODULE_NAME);
@@ -34,4 +35,5 @@ pub fn main() {
     coin_change_two::main();
     string_relation::main();
     longest_common_suqsequence::main();
+    maximum_product_subarray::main();
 }
