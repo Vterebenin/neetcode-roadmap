@@ -4,7 +4,7 @@ use crate::utils::print_pass;
 use std::cmp::max;
 
 const NAME: &str = "diameter-of-binary-tree";
-const LINK: &str = "https://leetcode.com/problems/diameter-of-binary-tree/";
+
 
 type TreeNodeType = Option<Rc<RefCell<TreeNode>>>;
 #[derive(Debug, PartialEq, Eq)]
@@ -50,7 +50,7 @@ pub fn main() {
     right.borrow_mut().right = Some(right_right_deep.clone());
     root.borrow_mut().right = Some(right.clone());
     assert_eq!(diameter_of_binary_tree(Some(root.clone())), 3);
-    print_pass(NAME, LINK);
+    print_pass(NAME);
 }
 
 

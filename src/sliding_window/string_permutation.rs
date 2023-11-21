@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "permutation-in-string";
-const LINK: &str = "https://leetcode.com/problems/permutation-in-string/";
+
 
 pub fn check_inclusion(s1: String, s2: String) -> bool {
     if s1.len() > s2.len() {
@@ -61,5 +61,5 @@ pub fn main() {
     let s1: String = String::from("adc");
     let s2: String = String::from("dcda");
     assert_eq!(check_inclusion(s1, s2), true);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "number-of-islands";
-const LINK: &str = "https://leetcode.com/problems/number-of-islands/";
+
 
 pub struct Point {
     x: i32,
@@ -65,5 +65,5 @@ pub fn main() {
     ];
     let number_of_islands: i32 = 3;
     assert_eq!(num_islands(grid), number_of_islands);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

@@ -3,7 +3,7 @@ use std::collections::HashMap;
 use crate::utils::print_pass;
 
 const NAME: &str = "target-sum";
-const LINK: &str = "https://leetcode.com/problems/target-sum/";
+
 
 pub fn find_target_sum_ways(nums: Vec<i32>, target: i32) -> i32 {
     let mut dp: HashMap<(i32, i32), i32> = HashMap::new();
@@ -54,5 +54,5 @@ pub fn main() {
     let nums = vec![1, 1, 1, 1, 1];
     let target = 9;
     assert_eq!(can_sum(nums, target), true);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

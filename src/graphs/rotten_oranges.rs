@@ -3,7 +3,7 @@ use std::collections::VecDeque;
 use crate::utils::print_pass;
 
 const NAME: &str = "rotten-oranges";
-const LINK: &str = "https://leetcode.com/problems/rotten-oranges/";
+
 
 pub fn oranges_rotting(mut grid: Vec<Vec<i32>>) -> i32 {
     let mut q = VecDeque::new();  
@@ -63,5 +63,5 @@ pub fn main() {
     ];
     let max_area: i32 = 0;
     assert_eq!(oranges_rotting(grid), max_area);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

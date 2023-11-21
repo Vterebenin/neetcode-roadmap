@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "insert-interval";
-const LINK: &str = "https://leetcode.com/problems/insert-interval/";
+
 
 pub fn is_overlapping(i1: &Vec<i32>, i2: &Vec<i32>) -> bool {
     i1[0].max(i2[0]) <= i1[1].min(i2[1])
@@ -63,5 +63,5 @@ pub fn main() {
     let intervals = vec![vec![3,5],vec![12,15]];
     let new_interval = vec![6, 6];
     assert_eq!(insert(intervals, new_interval), vec![vec![3, 5], vec![6, 6], vec![12, 15]]);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

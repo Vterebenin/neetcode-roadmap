@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "search-in-rotated-sorted-array";
-const LINK: &str = "https://leetcode.com/problems/search-in-rotated-sorted-array/";
+
 
 pub fn search(nums: Vec<i32>, target: i32) -> i32 {
     let mut left = 0;
@@ -35,5 +35,5 @@ pub fn main() {
     assert_eq!(search(nums, 8), 4);
     let nums: Vec<i32> = vec![3, 4, 5, 7, 8, 1, 2];
     assert_eq!(search(nums, 99), -1);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

@@ -42,7 +42,7 @@ pub fn network_delay_time(times: Vec<Vec<i32>>, n: i32, k: i32) -> i32 {
 }
 
 const NAME: &str = "network-delay-time";
-const LINK: &str = "https://leetcode.com/problems/network-delay-time/";
+
 
 pub fn main() {
     let times = vec![vec![2, 1, 1], vec![2, 3, 1], vec![3, 4, 1]];
@@ -60,7 +60,7 @@ pub fn main() {
     let times = vec![vec![1, 2, 1], vec![2, 3, 2], vec![1, 3, 1]];
     let n = 3;
     let k = 2;
-    assert_eq!(network_delay_time(times, n, k), 3);
+    assert_eq!(network_delay_time(times, n, k), -1);
 
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

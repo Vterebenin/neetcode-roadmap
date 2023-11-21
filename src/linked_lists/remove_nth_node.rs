@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "remove-nth-node-from-end-of-list";
-const LINK: &str = "https://leetcode.com/problems/remove-nth-node-from-end-of-list/";
+
 
 #[derive(PartialEq, Eq, Clone, Debug)]
 pub struct ListNode {
@@ -53,5 +53,5 @@ pub fn main() {
     answer = Some(Box::new(answer.unwrap().push_left(4)));
     answer = Some(Box::new(answer.unwrap().push_left(1)));
     assert_eq!(remove_nth_from_end(list1, 3), answer);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

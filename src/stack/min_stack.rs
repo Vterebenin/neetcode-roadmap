@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "min-stack";
-const LINK: &str = "https://leetcode.com/problems/min-stack/";
+
 
 struct MinStack {
     stack: Vec<i32>,
@@ -61,5 +61,5 @@ pub fn main() {
     let ret_4: i32 = obj.get_min();
     assert_eq!(ret_3, -1);
     assert_eq!(ret_4, -3);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

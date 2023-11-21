@@ -2,7 +2,7 @@ use crate::utils::print_pass;
 use std::collections::BinaryHeap;
 
 const NAME: &str = "k-closest-points-to-origin";
-const LINK: &str = "https://leetcode.com/problems/k-closest-points-to-origin/";
+
 
 
 // in rust you could just select nth unstable
@@ -25,5 +25,5 @@ pub fn main() {
     let nums = vec![3,2,1,5,6,4];
     let k = 2;
     assert_eq!(find_kth_largest(nums, k), 5);
-    print_pass(NAME, LINK);
+    print_pass(NAME);
 }

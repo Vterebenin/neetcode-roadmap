@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "merge-two-sorted-lists";
-const LINK: &str = "https://leetcode.com/problems/merge-two-sorted-lists/";
+
 
 #[derive(PartialEq, Eq, Clone, Debug)]
 pub struct ListNode {
@@ -56,5 +56,5 @@ pub fn main() {
     answer = Some(Box::new(answer.unwrap().push_left(3)));
     answer = Some(Box::new(answer.unwrap().push_left(1)));
     assert_eq!(merge_two_lists(list1, list2), answer);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "combination-sum-ii";
-const LINK: &str = "https://leetcode.com/problems/combination-sum/";
+
 
 pub fn combination_sum2(mut candidates: Vec<i32>, target: i32) -> Vec<Vec<i32>> {
     candidates.sort_unstable();
@@ -38,6 +38,6 @@ pub fn main() {
     let target = 6;
     let answer = vec![vec![1,1,2,2],vec![1,1,4],vec![1,2,3],vec![2,2,2],vec![2,4]];
     assert_eq!(combination_sum2(nums, target), answer);
-    print_pass(NAME, LINK);
+    print_pass(NAME);
 }
 

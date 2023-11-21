@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "missing-number";
-const LINK: &str = "https://leetcode.com/problems/missing-number/";
+
 
 pub fn missing_number(nums: Vec<i32>) -> i32 {
     nums.into_iter()
@@ -11,5 +11,5 @@ pub fn missing_number(nums: Vec<i32>) -> i32 {
 pub fn main() {
     let x: Vec<i32> = vec![0, 1, 2, 4, 5];
     assert_eq!(missing_number(x), 3);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

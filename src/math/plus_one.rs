@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "plus-one";
-const LINK: &str = "https://leetcode.com/problems/plus-one/";
+
 
 pub fn plus_one(mut digits: Vec<i32>) -> Vec<i32> {
     for x in digits.iter_mut().rev() {
@@ -24,5 +24,5 @@ pub fn main() {
     assert_eq!(plus_one(nums), vec![1, 2, 4]);
     let nums = vec![9,8,7,6,5,4,3,2,1,0];
     assert_eq!(plus_one(nums), vec![9,8,7,6,5,4,3,2,1,1]);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

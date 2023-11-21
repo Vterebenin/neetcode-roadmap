@@ -2,7 +2,7 @@ use crate::utils::print_pass;
 use std::collections::HashMap;
 
 const NAME: &str = "group-anagrams";
-const LINK: &str = "https://leetcode.com/problems/group-anagrams/";
+
 
 pub fn group_anagrams(strs: Vec<String>) -> Vec<Vec<String>> {
     let mut h = HashMap::new();
@@ -26,5 +26,5 @@ pub fn main() {
         String::from("bat")
     ];
     assert!(group_anagrams(strings).len() == 3);
-    print_pass(NAME, LINK);
+    print_pass(NAME);
 }

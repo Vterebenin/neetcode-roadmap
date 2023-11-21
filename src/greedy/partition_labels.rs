@@ -3,7 +3,7 @@ use std::collections::HashMap;
 use crate::utils::print_pass;
 
 const NAME: &str = "partition-labels";
-const LINK: &str = "https://leetcode.com/problems/partition-labels/";
+
 
 pub fn partition_labels(s: String) -> Vec<i32> {
     let mut map: HashMap<char, usize> = HashMap::new();
@@ -31,5 +31,5 @@ pub fn partition_labels(s: String) -> Vec<i32> {
 pub fn main() {
     let s = "ababcbacadefegdehijhklij".to_string();
     assert_eq!(partition_labels(s), vec![9, 7, 8]);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

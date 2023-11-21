@@ -3,7 +3,7 @@ use std::cell::RefCell;
 use crate::utils::print_pass;
 
 const NAME: &str = "invert-binary-tree";
-const LINK: &str = "https://leetcode.com/problems/invert-binary-tree/";
+
 
 #[derive(Debug, PartialEq, Eq)]
 pub struct TreeNode {
@@ -47,7 +47,7 @@ pub fn main() {
     answer.borrow_mut().left = Some(right.clone());
     answer.borrow_mut().right = Some(left.clone());
     assert_eq!(invert_tree(Some(root.clone())), Some(answer.clone()));
-    print_pass(NAME, LINK);
+    print_pass(NAME);
 }
 
 

@@ -2,7 +2,7 @@ use std::collections::HashMap;
 use crate::utils::print_pass;
 
 const NAME: &str = "hand-of-straights";
-const LINK: &str = "https://leetcode.com/problems/hand-of-straights/";
+
 
 pub fn is_n_straight_hand(mut hand: Vec<i32>, group_size: i32) -> bool {
     hand.sort();
@@ -35,5 +35,5 @@ pub fn main() {
     let hand = vec![3,1,2];
     let target = 3;
     assert_eq!(is_n_straight_hand(hand, target), true);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

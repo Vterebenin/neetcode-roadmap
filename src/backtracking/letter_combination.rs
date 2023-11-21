@@ -3,7 +3,7 @@ use std::collections::HashMap;
 use crate::utils::print_pass;
 
 const NAME: &str = "combination-sum-ii";
-const LINK: &str = "https://leetcode.com/problems/combination-sum/";
+
 
 
 pub fn letter_combinations(digits: String) -> Vec<String> {
@@ -67,6 +67,6 @@ pub fn main() {
         "cf".to_string(),
     ];
     assert_eq!(letter_combinations(digits), answer);
-    print_pass(NAME, LINK);
+    print_pass(NAME);
 }
 

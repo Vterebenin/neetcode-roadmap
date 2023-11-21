@@ -2,7 +2,7 @@ use crate::utils::print_pass;
 use std::cmp::Ordering;
 
 const NAME: &str = "find-minimum-in-rotated-sorted-array";
-const LINK: &str = "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/";
+
 
 pub fn find_min(nums: Vec<i32>) -> i32 {
     if nums.len() == 1 { return *nums.first().unwrap(); }
@@ -28,5 +28,5 @@ pub fn find_min(nums: Vec<i32>) -> i32 {
 pub fn main() {
     let nums: Vec<i32> = vec![3, 4, 5, 1, 2];
     assert_eq!(find_min(nums), 1);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

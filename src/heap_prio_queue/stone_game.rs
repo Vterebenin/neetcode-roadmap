@@ -2,7 +2,7 @@ use crate::utils::print_pass;
 use std::collections::BinaryHeap;
 
 const NAME: &str = "last-stone-weight";
-const LINK: &str = "https://leetcode.com/problems/last-stone-weight/";
+
 
 
 pub fn last_stone_weight(stones: Vec<i32>) -> i32 {
@@ -28,5 +28,5 @@ pub fn main() {
     let stones = vec![2, 7, 4, 1, 8, 1];
     let answer = 1;
     assert_eq!(last_stone_weight(stones), answer);
-    print_pass(NAME, LINK);
+    print_pass(NAME);
 }

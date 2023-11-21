@@ -4,7 +4,7 @@ use std::cell::RefCell;
 use crate::utils::print_pass;
 
 const NAME: &str = "binary-tree-right-side-view";
-const LINK: &str = "https://leetcode.com/problems/binary-tree-right-side-view/";
+
 
 type TreeNodeType = Option<Rc<RefCell<TreeNode>>>;
 #[derive(Debug, PartialEq, Eq)]
@@ -60,7 +60,7 @@ pub fn main() {
     root.borrow_mut().left = Some(left.clone());
     root.borrow_mut().right = Some(right.clone());
     assert_eq!(right_side_view(Some(root.clone())), [5, 8]);
-    print_pass(NAME, LINK);
+    print_pass(NAME);
 }
 
 

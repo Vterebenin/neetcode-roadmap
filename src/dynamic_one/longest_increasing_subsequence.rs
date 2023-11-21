@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "longest-increasing-subsequence";
-const LINK: &str = "https://leetcode.com/problems/longest-increasing-subsequence/";
+
 
 pub fn length_of_lis(nums: Vec<i32>) -> i32 {
     if nums.len() <= 1 { return nums.len() as i32; }
@@ -26,5 +26,5 @@ pub fn main() {
     assert_eq!(length_of_lis(nums), 4);
     let nums = vec![0,1,0,3,2,3];
     assert_eq!(length_of_lis(nums), 4);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

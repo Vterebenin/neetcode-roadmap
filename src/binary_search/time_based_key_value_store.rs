@@ -3,7 +3,7 @@ use std::collections::HashMap;
 use crate::utils::print_pass;
 
 const NAME: &str = "time-based-key-value-store";
-const LINK: &str = "https://leetcode.com/problems/time-based-key-value-store";
+
 
 #[derive(Debug, Clone)]
 struct TimeMap {
@@ -61,5 +61,5 @@ pub fn main() {
     obj.set("foo".to_string(), "bxz".to_string(), 7);
     obj.set("foo".to_string(), "bar".to_string(), 12);
     obj.get("foo".to_string(), 10);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

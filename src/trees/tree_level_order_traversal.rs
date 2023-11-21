@@ -4,7 +4,7 @@ use std::cell::RefCell;
 use crate::utils::print_pass;
 
 const NAME: &str = "binary-tree-level-order-traversal";
-const LINK: &str = "https://leetcode.com/problems/binary-tree-level-order-traversal/";
+
 
 #[derive(Debug, PartialEq, Eq)]
 pub struct TreeNode {
@@ -67,7 +67,7 @@ pub fn main() {
         vec![8, 8],
     ];
     assert_eq!(level_order(Some(root.clone())), answer);
-    print_pass(NAME, LINK);
+    print_pass(NAME);
 }
 
 

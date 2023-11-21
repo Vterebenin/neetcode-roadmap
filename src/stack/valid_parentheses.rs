@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "valid-parentheses";
-const LINK: &str = "https://leetcode.com/problems/valid-parentheses/";
+
 
 fn valid_parentheses(s: String) -> bool {
     let mut stack: Vec<char> = vec![];
@@ -22,5 +22,5 @@ pub fn main() {
     assert!(valid_parentheses(str));
     let str = String::from("(]");
     assert!(!valid_parentheses(str));
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

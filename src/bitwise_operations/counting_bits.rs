@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "counting-bits";
-const LINK: &str = "https://leetcode.com/problems/counting-bits/";
+
 
 pub fn count_bits(n: i32) -> Vec<i32> {
     let n = (n + 1) as usize;
@@ -15,5 +15,5 @@ pub fn count_bits(n: i32) -> Vec<i32> {
 pub fn main() {
     let n = 5;
     assert_eq!(count_bits(n), vec![0,1,1,2,1,2]);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

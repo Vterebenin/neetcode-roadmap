@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "longest-palindromic-substring";
-const LINK: &str = "https://leetcode.com/problems/longest-palindromic-substring/";
+
 
 pub fn longest_palindrome(s: String) -> String {
     let n = s.len();
@@ -40,5 +40,5 @@ pub fn main() {
     assert_eq!(longest_palindrome(string), "bb");
     let string = String::from("eabcb");
     assert_eq!(longest_palindrome(string), "bcb");
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

@@ -2,7 +2,7 @@ use crate::utils::print_pass;
 use std::collections::HashMap;
 
 const NAME: &str = "top-k-frequent-elements";
-const LINK: &str = "https://leetcode.com/problems/top-k-frequent-elements/";
+
 
 pub fn top_k_frequent(nums: Vec<i32>, k: i32) -> Vec<i32> {
     let mut frequency: HashMap<i32, i32> = HashMap::new();
@@ -18,5 +18,5 @@ pub fn top_k_frequent(nums: Vec<i32>, k: i32) -> Vec<i32> {
 pub fn main() {
     let items = vec![1, 1, 1, 2, 2, 3];
     assert_eq!(top_k_frequent(items, 2), vec![1, 2]);
-    print_pass(NAME, LINK);
+    print_pass(NAME);
 }

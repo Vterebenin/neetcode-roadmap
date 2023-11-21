@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "course-schedule";
-const LINK: &str = "https://leetcode.com/problems/course-schedule/";
+
 
 const PREREQUISITE: usize = 0;
 const COURSE: usize = 1;
@@ -44,5 +44,5 @@ pub fn main() {
     let num_courses = 2;
     let prerequisites = vec![vec![1, 0]];
     assert_eq!(can_finish(num_courses, prerequisites), true);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

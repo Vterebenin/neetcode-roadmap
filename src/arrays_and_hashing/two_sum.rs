@@ -2,8 +2,8 @@ use std::collections::HashMap;
 
 use crate::utils::print_pass;
 
-const NAME: &str = "two_sum";
-const LINK: &str = "https://leetcode.com/problems/two-sum/";
+const NAME: &str = "two-sum";
+
 fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
     let mut map: HashMap<i32, i32> = HashMap::new();
 
@@ -23,5 +23,5 @@ pub fn main() {
     let items = vec![1, 3, 2, 3];
     let target = 7;
     assert_eq!(two_sum(items, target), vec![]);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

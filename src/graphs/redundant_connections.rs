@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "redundant-connection";
-const LINK: &str = "https://leetcode.com/problems/redundant-connection/";
+
 
 #[derive(Debug)]
 struct UnionFind {
@@ -51,5 +51,5 @@ pub fn main() {
     assert_eq!(find_redundant_connection(edges), vec![2, 3]);
     let edges = vec![vec![1,2],vec![2,3],vec![3,4],vec![1,4],vec![1,5]];
     assert_eq!(find_redundant_connection(edges), vec![1, 4]);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

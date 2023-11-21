@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "jump-game";
-const LINK: &str = "https://leetcode.com/problems/jump-game/";
+
 
 pub fn can_jump(nums: Vec<i32>) -> bool {
     let mut max_val: i32 = 0;
@@ -32,5 +32,5 @@ pub fn main() {
     assert_eq!(can_jump(nums), true);
     let nums: Vec<i32> = vec![3,4,0,1,0,0,3,0];
     assert_eq!(can_jump(nums), false);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

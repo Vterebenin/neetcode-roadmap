@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "valid-parenthesis-string";
-const LINK: &str = "https://leetcode.com/problems/valid-parenthesis-string/";
+
 
 pub fn check_valid_string(s: String) -> bool {
     let mut min = 0;
@@ -43,5 +43,5 @@ pub fn main() {
     assert!(check_valid_string(str));
     let str = String::from("((((()(()()()*()(((((*)()*(**(())))))(())()())(((())())())))))))(((((())*)))()))(()((*()*(*)))(*)()");
     assert!(check_valid_string(str));
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "two-sum-ii-input-array-is-sorted";
-const LINK: &str = "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/";
+
 pub fn trap(height: Vec<i32>) -> i32 {
     let (mut left, mut right) = (0, height.len() - 1);
     let mut pool_height = 0;
@@ -26,5 +26,5 @@ pub fn main() {
     let height = vec![0,1,0,2,1,0,1,3,2,1,2,1];
     let target = 6;
     assert_eq!(trap(height), target);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

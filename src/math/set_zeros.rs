@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "rotate-image";
-const LINK: &str = "https://leetcode.com/problems/rotate-image/";
+
 
 pub fn set_zeroes(matrix: &mut Vec<Vec<i32>>) {
     let column_size = matrix.len();
@@ -32,5 +32,5 @@ pub fn main() {
     let mut matrix = vec![vec![0, 1, 1, 0], vec![1, 1, 1, 1], vec![1, 1, 1, 1]];
     set_zeroes(&mut matrix);
     assert_eq!(matrix.clone(), vec![vec![0, 0, 0, 0], vec![0, 1, 1, 0], vec![0, 1, 1, 0]]);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

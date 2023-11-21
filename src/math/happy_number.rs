@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "happy-number";
-const LINK: &str = "https://leetcode.com/problems/happy-number/";
+
 
 pub fn is_happy(n: i32) -> bool {
     if n == 1 { return true; }
@@ -27,5 +27,5 @@ pub fn is_happy(n: i32) -> bool {
 
 pub fn main() {
     assert_eq!(is_happy(19), true);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

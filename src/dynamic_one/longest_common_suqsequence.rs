@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "longest-common-subsequence";
-const LINK: &str = "https://leetcode.com/problems/longest-common-subsequence/";
+
 
 
 pub fn longest_common_subsequence(text1: String, text2: String) -> i32 {
@@ -35,5 +35,5 @@ pub fn main() {
     let text1 = String::from("aaa");
     let text2 = String::from("aaaa");
     assert_eq!(longest_common_subsequence(text1, text2), 3);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

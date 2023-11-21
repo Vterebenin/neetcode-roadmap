@@ -1,7 +1,6 @@
 use crate::utils::print_pass;
 
-const NAME: &str = "counting-bits";
-const LINK: &str = "https://leetcode.com/problems/counting-bits/";
+const NAME: &str = "sum-of-two-integers";
 
 pub fn get_sum(a: i32, b: i32) -> i32 {
     if b == 0 {
@@ -15,5 +14,5 @@ pub fn get_sum(a: i32, b: i32) -> i32 {
 pub fn main() {
     assert_eq!(get_sum(1, 2), 3);
     assert_eq!(get_sum(-1, 1), 0);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

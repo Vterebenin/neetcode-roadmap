@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "three-sum";
-const LINK: &str = "https://leetcode.com/problems/3sum/";
+
 
 pub fn three_sum(mut nums: Vec<i32>) -> Vec<Vec<i32>> {
     let mut res = Vec::new();
@@ -39,5 +39,5 @@ pub fn main() {
     let nums = vec![-1,0,1,2,-1,-4];
     let answer = vec![vec![-1,-1,2], vec![-1,0,1]];
     assert_eq!(three_sum(nums), answer);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

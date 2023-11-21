@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "longest-repeating-character-replacement";
-const LINK: &str = "https://leetcode.com/problems/longest-repeating-character-replacement/";
+
 
 #[derive(PartialEq, Eq, Clone, Debug)]
 pub struct ListNode {
@@ -51,5 +51,5 @@ pub fn main() {
     let mut reversed = Some(Box::new(ListNode::new(2)));
     reversed = Some(Box::new(reversed.unwrap().push_left(1)));
     assert_eq!(reverse_list(list), reversed);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

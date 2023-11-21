@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
-const NAME: &str = "is_palindrome";
-const LINK: &str = "https://leetcode.com/problems/valid-palindrome/";
+const NAME: &str = "is-palindrome";
+
 
 fn is_palindrome(s: String) -> bool {
     let iter = s.chars()
@@ -18,5 +18,5 @@ pub fn main() {
     assert!(is_palindrome(s));
     let s = String::from("0P");
     assert!(!is_palindrome(s));
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

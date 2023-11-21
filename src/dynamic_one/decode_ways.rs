@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "decode-ways";
-const LINK: &str = "https://leetcode.com/problems/decode-ways/";
+
 
 pub fn num_decodings(s: String) -> i32 {
     // dp: f(i) => start from i, num of decodings.
@@ -38,5 +38,5 @@ pub fn main() {
     assert_eq!(num_decodings(s), 3);
     let s = String::from("06");
     assert_eq!(num_decodings(s), 0);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

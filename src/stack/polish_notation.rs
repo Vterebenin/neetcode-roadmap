@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "evaluate-reverse-polish-notation";
-const LINK: &str = "https://leetcode.com/problems/evaluate-reverse-polish-notation/";
+
 
 fn eval_rpn(tokens: Vec<String>) -> i32 {
     let mut stack = Vec::new();
@@ -32,5 +32,5 @@ pub fn main() {
         String::from("*")
     ];
     assert_eq!(eval_rpn(notation), 9);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

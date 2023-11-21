@@ -3,7 +3,7 @@ use std::cell::RefCell;
 use crate::utils::print_pass;
 
 const NAME: &str = "subtree-of-another-tree";
-const LINK: &str = "https://leetcode.com/problems/subtree-of-another-tree/";
+
 
 #[derive(Debug, PartialEq, Eq)]
 pub struct TreeNode {
@@ -67,7 +67,7 @@ pub fn main() {
     root.borrow_mut().left = Some(left.clone());
     root.borrow_mut().right = Some(right.clone());
     assert_eq!(is_subtree(Some(root.clone()), Some(left.clone())), true);
-    print_pass(NAME, LINK);
+    print_pass(NAME);
 }
 
 

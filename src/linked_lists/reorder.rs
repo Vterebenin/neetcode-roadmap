@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "reorder-list";
-const LINK: &str = "https://leetcode.com/problems/reorder-list/";
+
 
 #[derive(PartialEq, Eq, Clone, Debug)]
 pub struct ListNode {
@@ -66,5 +66,5 @@ pub fn main() {
     answer = Some(Box::new(answer.unwrap().push_left(1)));
     reorder_list(&mut list1);
     assert_eq!(list1, answer);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "merge-triplets-to-form-target-triplet";
-const LINK: &str = "https://leetcode.com/problems/merge-triplets-to-form-target-triplet/";
+
 
 pub fn merge_triplets(triplets: Vec<Vec<i32>>, target: Vec<i32>) -> bool {
     let mut res = vec![0; 3];
@@ -35,5 +35,5 @@ pub fn main() {
     let triplets = vec![vec![3,5,1],vec![10,5,7]];
     let target = vec![3,5,7];
     assert_eq!(merge_triplets(triplets, target), false);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "unique-paths";
-const LINK: &str = "https://leetcode.com/problems/unique-paths/";
+
 
 pub fn unique_paths(m: i32, n: i32) -> i32 {
     let m = m as usize;
@@ -22,5 +22,5 @@ pub fn unique_paths(m: i32, n: i32) -> i32 {
 
 pub fn main() {
     assert_eq!(unique_paths(3, 7), 28);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

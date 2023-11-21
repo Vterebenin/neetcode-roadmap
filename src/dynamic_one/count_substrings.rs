@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "palindromic-substrings";
-const LINK: &str = "https://leetcode.com/problems/palindromic-substrings/";
+
 
 pub fn count_substrings(s: String) -> i32 {
     let s = s.into_bytes();
@@ -19,5 +19,5 @@ pub fn main() {
     assert_eq!(count_substrings(string), 3);
     let string = String::from("aaa");
     assert_eq!(count_substrings(string), 6);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

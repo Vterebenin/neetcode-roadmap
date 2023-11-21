@@ -3,7 +3,7 @@ use std::cell::RefCell;
 use crate::utils::print_pass;
 
 const NAME: &str = "lowest-common-ancestor-of-a-binary-search-tree";
-const LINK: &str = "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/";
+
 
 #[derive(Debug, PartialEq, Eq)]
 pub struct TreeNode {
@@ -57,7 +57,7 @@ pub fn main() {
     root.borrow_mut().left = Some(left.clone());
     root.borrow_mut().right = Some(right.clone());
     assert_eq!(lowest_common_ancestor(Some(root.clone()), Some(l2.clone()), Some(l1.clone())), Some(left));
-    print_pass(NAME, LINK);
+    print_pass(NAME);
 }
 
 

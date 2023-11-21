@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "longest-substring-without-repeating-characters";
-const LINK: &str = "https://leetcode.com/problems/longest-substring-without-repeating-characters/";
+
 
 pub fn length_of_longest_substring(s: String) -> i32 {
     let mut max_len: usize = 0;
@@ -26,5 +26,5 @@ pub fn main() {
     assert_eq!(length_of_longest_substring(item), 2);
     let item: String = String::from("dvdf");
     assert_eq!(length_of_longest_substring(item), 3);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "decode-ways";
-const LINK: &str = "https://leetcode.com/problems/decode-ways/";
+
 
 pub fn coin_change(coins: Vec<i32>, amount: i32) -> i32 {
     // Amount is guaranteed to be <= 10^4, so use 10^5 as sentinel
@@ -35,5 +35,5 @@ pub fn main() {
     let coins = vec![1];
     let amount = 0;
     assert_eq!(coin_change(coins, amount), 0);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

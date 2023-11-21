@@ -2,7 +2,7 @@ use std::collections::HashMap;
 use crate::utils::print_pass;
 
 const NAME: &str = "implement-trie-prefix-tree";
-const LINK: &str = "https://leetcode.com/problems/implement-trie-prefix-tree/";
+
 
 #[derive(Debug, PartialEq, Eq, Clone)]
 struct Trie {
@@ -86,7 +86,7 @@ pub fn main() {
     trie.insert("wow".to_string());
     assert!(trie.search("wow".to_string()));
     assert!(trie.starts_with("wo".to_string()));
-    print_pass(NAME, LINK);
+    print_pass(NAME);
 }
 
 

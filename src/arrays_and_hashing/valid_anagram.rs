@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
-const NAME: &str = "valid_anagram";
-const LINK: &str = "https://leetcode.com/problems/valid-anagram/description/";
+const NAME: &str = "valid-anagram";
+
 fn valid_anagram(s: String, t: String) -> bool {
     if s.len() != t.len() {
         return false;
@@ -24,5 +24,5 @@ pub fn main() {
     let s = String::from("nagaram");
     let t = String::from("anagram");
     assert!(valid_anagram(s, t), "anagram should be true if strings are anagram");
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

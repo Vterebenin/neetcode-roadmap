@@ -4,7 +4,7 @@ use crate::utils::print_pass;
 use std::cmp::max;
 
 const NAME: &str = "balanced-binary-tree";
-const LINK: &str = "https://leetcode.com/problems/balanced-binary-tree/";
+
 
 type TreeNodeType = Option<Rc<RefCell<TreeNode>>>;
 #[derive(Debug, PartialEq, Eq)]
@@ -56,7 +56,7 @@ pub fn main() {
     right.borrow_mut().right = Some(right_1_right.clone());
     root.borrow_mut().right = Some(right.clone());
     assert_eq!(is_balanced(Some(root.clone())), false);
-    print_pass(NAME, LINK);
+    print_pass(NAME);
 }
 
 

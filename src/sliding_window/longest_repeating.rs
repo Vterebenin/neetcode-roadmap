@@ -3,7 +3,7 @@ use std::collections::HashMap;
 use crate::utils::print_pass;
 
 const NAME: &str = "longest-repeating-character-replacement";
-const LINK: &str = "https://leetcode.com/problems/longest-repeating-character-replacement/";
+
 
 pub fn character_replacement(s: String, k: i32) -> i32 {
     let mut count: HashMap<char, i32> = HashMap::new();
@@ -39,5 +39,5 @@ pub fn main() {
     let s: String = String::from("ABBB");
     let k: i32 = 2;
     assert_eq!(character_replacement(s, k), 4);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

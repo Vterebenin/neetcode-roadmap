@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "product-of-array-except-self";
-const LINK: &str = "https://leetcode.com/problems/product-of-array-except-self/";
+
 
 // basically multiply from left to right and then from right to left, we could do this in O(n)
 pub fn product_except_self(nums: Vec<i32>) -> Vec<i32> {
@@ -29,5 +29,5 @@ pub fn product_except_self(nums: Vec<i32>) -> Vec<i32> {
 pub fn main() {
     let items = vec![1, 2, 3, 4];
     assert_eq!(product_except_self(items), vec![24, 12, 8, 6]);
-    print_pass(NAME, LINK);
+    print_pass(NAME);
 }

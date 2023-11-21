@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "edit-distance";
-const LINK: &str = "https://leetcode.com/problems/edit-distance/";
+
 
 pub fn min_distance(word1: String, word2: String) -> i32 {
     let mut dp = vec![vec![0; word2.len() + 1]; word1.len() + 1];
@@ -30,5 +30,5 @@ pub fn main() {
     let word1 = String::from("horse");
     let word2 = String::from("ros");
     assert_eq!(min_distance(word1, word2), 3);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

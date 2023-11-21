@@ -2,7 +2,7 @@ use crate::utils::print_pass;
 use std::cmp::Ordering;
 
 const NAME: &str = "binary-search";
-const LINK: &str = "https://leetcode.com/problems/binary-search/";
+
 
 pub fn search(nums: Vec<i32>, target: i32) -> i32 {
     let (mut low, mut high) = (0, nums.len());
@@ -21,5 +21,5 @@ pub fn main() {
     let nums: Vec<i32> = vec![-1,0,3,5,9,12];
     let target: i32 = 9;
     assert_eq!(search(nums, target), 4);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

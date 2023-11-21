@@ -2,7 +2,7 @@ use crate::utils::print_pass;
 use std::collections::BinaryHeap;
 
 const NAME: &str = "k-closest-points-to-origin";
-const LINK: &str = "https://leetcode.com/problems/k-closest-points-to-origin/";
+
 
 
 pub fn k_closest(points: Vec<Vec<i32>>, k: i32) -> Vec<Vec<i32>> {
@@ -39,5 +39,5 @@ pub fn main() {
     ];
     let k = 4;
     assert_eq!(k_closest(points.clone(), k), [[2,2],[2,2],[1,1],[2,-2]]);
-    print_pass(NAME, LINK);
+    print_pass(NAME);
 }

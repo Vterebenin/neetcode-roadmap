@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "surrounded-regions";
-const LINK: &str = "https://leetcode.com/problems/surrounded-regions/";
+
 
 pub fn solve(board: &mut Vec<Vec<char>>) {
     let mut stack = vec![];
@@ -72,6 +72,6 @@ pub fn main() {
     ];
     solve(&mut grid);
     assert_eq!(grid, grid_answer);
-    print_pass(NAME, LINK);
+    print_pass(NAME);
 }
 

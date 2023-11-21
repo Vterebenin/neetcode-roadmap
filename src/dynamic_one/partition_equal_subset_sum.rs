@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "partition-equal-subset-sum";
-const LINK: &str = "https://leetcode.com/problems/partition-equal-subset-sum/";
+
 
 pub fn can_partition(nums: Vec<i32>) -> bool {
     let t_sum = nums.iter().fold(0, |acc, item| acc+item);
@@ -33,5 +33,5 @@ pub fn main() {
     assert_eq!(can_partition(nums), false);
     let nums = vec![1,2,3,4,5,6,7];
     assert_eq!(can_partition(nums), true);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

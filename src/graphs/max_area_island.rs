@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "max-area-of-island";
-const LINK: &str = "https://leetcode.com/problems/max-area-of-island/";
+
 
 pub struct Point {
     x: i32,
@@ -68,5 +68,5 @@ pub fn main() {
     ];
     let max_area: i32 = 4;
     assert_eq!(max_area_of_island(grid), max_area);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

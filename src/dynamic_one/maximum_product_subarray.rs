@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "longest-increasing-subsequence";
-const LINK: &str = "https://leetcode.com/problems/longest-increasing-subsequence/";
+
 
 // Let product[i]=nums[0]∗nums[1]∗...∗nums[i].
 // If product[i-1] > 0, and nums[i]<0, then product[i]<0.
@@ -37,5 +37,5 @@ pub fn main() {
     assert_eq!(max_product(nums), 3);
     let nums = vec![0, 2];
     assert_eq!(max_product(nums), 2);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

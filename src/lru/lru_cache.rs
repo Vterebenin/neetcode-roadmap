@@ -3,7 +3,7 @@ use std::{rc::Rc, cell::RefCell, collections::HashMap, fmt::Debug};
 use crate::utils::print_pass;
 
 const NAME: &str = "lru-cache";
-const LINK: &str = "https://leetcode.com/problems/lru-cache/";
+
 
 struct LRUCache { 
     map: HashMap<i32, Rc<RefCell<ListNode>>>,
@@ -173,6 +173,6 @@ pub fn main() {
     lru_cache.put(4, 4); // LRU key was 1, evicts key 1, cache is {4=4, 3=3}
     lru_cache.get(1);    // return -1 (not found)
     lru_cache.get(3);    // return 3
-    print_pass(NAME, LINK);
+    print_pass(NAME);
 }
 

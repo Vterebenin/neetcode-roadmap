@@ -4,7 +4,8 @@ use colored::ColoredString;
 
 static TOTAL_CALLS: AtomicUsize = AtomicUsize::new(0);
 
-pub fn print_pass(name: &str, link: &str) {
+pub fn print_pass(name: &str) {
+    let link = format!("https://leetcode.com/problems/{}/", name);
     let name_formatted: ColoredString = format!("✔️ {} passed! Solution for this problem: ", name).green();
     let link_formatted: ColoredString = format!("{}", link).blue().underline();
     let string_for_print: ColoredString = format!("  {}{}", name_formatted, link_formatted).on_black();

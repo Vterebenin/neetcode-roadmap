@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
-const NAME: &str = "valid_anagram";
-const LINK: &str = "https://leetcode.com/problems/valid-anagram/description/";
+const NAME: &str = "valid-anagram";
+
 
 const SIZE: usize = 9;
 
@@ -78,5 +78,5 @@ pub fn main() {
         vec!['.','.','.','.','8','.','.','7','9']
     ];
     assert!(is_valid_sudoku(board));
-    print_pass(NAME, LINK);
+    print_pass(NAME);
 }

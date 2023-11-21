@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "coin-change-ii";
-const LINK: &str = "https://leetcode.com/problems/coin-change-ii/";
+
 
 pub fn change(target: i32, nums: Vec<i32>) -> i32 {
     let mut dp = vec![0; target as usize + 1];
@@ -25,6 +25,6 @@ pub fn main() {
     let coins = vec![10];
     let amount = 10;
     assert_eq!(change(amount, coins), 1);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }
 

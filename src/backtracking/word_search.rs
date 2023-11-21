@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "word-search";
-const LINK: &str = "https://leetcode.com/problems/word-search/";
+
 
 #[derive(Debug, Clone, Copy)]
 pub struct Point {
@@ -105,6 +105,6 @@ pub fn main() {
         vec!['A','D','E','E']
     ];
     assert_eq!(exist(board, word), true);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }
 

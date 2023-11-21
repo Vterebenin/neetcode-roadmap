@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "min-cost-climbing-stairs";
-const LINK: &str = "https://leetcode.com/problems/min-cost-climbing-stairs/";
+
 
 pub fn min_cost_climbing_stairs(cost: Vec<i32>) -> i32 {
     let mut costs_copy = cost.clone();
@@ -17,5 +17,5 @@ pub fn main() {
     assert_eq!(min_cost_climbing_stairs(costs), 15);
     let costs = vec![1, 100, 1, 1, 1, 100, 1, 1, 100, 1];
     assert_eq!(min_cost_climbing_stairs(costs), 6);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

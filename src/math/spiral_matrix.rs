@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "spiral-matrix";
-const LINK: &str = "https://leetcode.com/problems/spiral-matrix/";
+
 
 pub fn spiral_order(matrix: Vec<Vec<i32>>) -> Vec<i32> {
     let dirs: Vec<(i32, i32)> = vec![
@@ -64,5 +64,5 @@ pub fn main() {
     let matrix = vec![vec![1, 2, 3, 4], vec![5, 6, 7, 8], vec![9, 10, 11, 12]];
     let answer = vec![1,2,3,4,8,12,11,10,9,5,6,7];
     assert_eq!(spiral_order(matrix), answer);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

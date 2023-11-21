@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "house-robber-ii";
-const LINK: &str = "https://leetcode.com/problems/min-cost-climbing-stairs/";
+
 
 pub fn rob(nums: Vec<i32>) -> i32 {
     if nums.len() == 1 { return nums[0] };
@@ -35,5 +35,5 @@ pub fn main() {
     assert_eq!(rob(costs), 3);
     let costs = vec![0, 0];
     assert_eq!(rob(costs), 0);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

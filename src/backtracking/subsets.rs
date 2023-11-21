@@ -1,7 +1,7 @@
 use crate::utils::print_pass;
 
 const NAME: &str = "subsets";
-const LINK: &str = "https://leetcode.com/problems/subsets/";
+
 
 
 pub fn subsets(mut nums: Vec<i32>) -> Vec<Vec<i32>> {
@@ -38,5 +38,5 @@ pub fn main() {
         vec![3]
     ];
     assert_eq!(subsets(nums), answer);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

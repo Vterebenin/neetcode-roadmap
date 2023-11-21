@@ -2,7 +2,7 @@ use crate::utils::print_pass;
 use std::{cmp::Ordering, vec};
 
 const NAME: &str = "search-a-2d-matrix";
-const LINK: &str = "https://leetcode.com/problems/search-a-2d-matrix/";
+
 
 pub fn search_matrix(matrix: Vec<Vec<i32>>, target: i32) -> bool {
     let (mut low, mut high) = (0, matrix.len());
@@ -38,5 +38,5 @@ pub fn main() {
     let nums: Vec<Vec<i32>> = vec![vec![1,3,5,7],vec![10,11,16,20], vec![23,30,34,60]];
     let target: i32 = 3;
     assert_eq!(search_matrix(nums, target), true);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }

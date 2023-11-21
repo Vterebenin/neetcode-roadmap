@@ -2,7 +2,7 @@ use crate::utils::print_pass;
 use std::cmp;
 
 const NAME: &str = "container-with-most-water";
-const LINK: &str = "https://leetcode.com/problems/container-with-most-water/";
+
 
 fn max_area(height: Vec<i32>) -> i32 {
     let mut max = 0;
@@ -26,5 +26,5 @@ pub fn main() {
     assert_eq!(max_area(height), 49);
     let height = vec![1, 1];
     assert_eq!(max_area(height), 1);
-    print_pass(NAME, LINK)
+    print_pass(NAME)
 }
