@@ -1,109 +1,46 @@
 use crate::utils::print_pass;
-use std::cmp::Ordering;
-use std::collections::{BinaryHeap, HashMap};
-
-#[derive(Debug)]
-struct Graph {
-    nodes: HashMap<i32, HashMap<i32, i32>>, // Node, Neighbor, Cost
-}
-
-#[derive(Copy, Clone, Eq, PartialEq)]
-struct Vertex {
-    id: i32,
-    distance: i32,
-}
-//
-// Implement a custom ordering for the BinaryHeap.
-impl Ord for Vertex {
-    fn cmp(&self, other: &Self) -> Ordering {
-        other.distance.cmp(&self.distance) // Reverse ordering
-    }
-}
-
-impl PartialOrd for Vertex {
-    fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
-        Some(self.cmp(other))
-    }
-}
-
-impl Graph {
-    fn new() -> Graph {
-        Graph {
-            nodes: HashMap::new(),
-        }
-    }
-
-    fn add_node(&mut self, node: i32) {
-        self.nodes.entry(node).or_insert(HashMap::new());
-    }
-
-    fn add_edge(&mut self, node1: i32, node2: i32, cost: i32) {
-        self.nodes.get_mut(&node1).unwrap().insert(node2, cost);
-    }
-}
-
-fn dijkstra(graph: &Graph, start: i32) -> HashMap<i32, i32> {
-    let graph = &graph.nodes;
-    let mut distances: HashMap<i32, i32> = graph.keys().map(|&k| (k, i32::MAX)).collect();
-    distances.insert(start, 0);
-
-    let mut priority_queue: BinaryHeap<Vertex> = BinaryHeap::new();
-    priority_queue.push(Vertex {
-        id: start,
-        distance: 0,
-    });
-
-    while let Some(current_vertex) = priority_queue.pop() {
-        let current_id = current_vertex.id;
-        let current_distance = current_vertex.distance;
-
-        if current_distance > distances[&current_id] {
-            continue;
-        }
-
-        if let Some(neighbors) = graph.get(&current_id) {
-            for (&neighbor, &weight) in neighbors {
-                let new_distance = current_distance + weight;
-
-                if new_distance < distances[&neighbor] {
-                    distances.insert(neighbor, new_distance);
-                    priority_queue.push(Vertex {
-                        id: neighbor,
-                        distance: new_distance,
-                    });
-                }
-            }
-        }
-    }
-    distances
-}
+use std::cmp::Reverse;
+use std::collections::BinaryHeap;
 
 pub fn network_delay_time(times: Vec<Vec<i32>>, n: i32, k: i32) -> i32 {
-    let mut graph = Graph::new();
-    for time in times {
-        let (node1, node2, cost) = (time[0], time[1], time[2]);
-        graph.add_node(node1);
-        graph.add_node(node2);
-        graph.add_edge(node1, node2, cost);
+    let n = n as usize;
+    let k = k as usize;
+    let adjacency_list = {
+        let mut res = vec![vec![]; n + 1];
+        for time in times {
+            let u = time[0] as usize;
+            let v = time[1] as usize;
+            let w = time[2];
+            res[u].push((v, w));
+        }
+        res
+    };
+
+    // dijkstra
+    let mut distances = vec![std::i32::MAX; n + 1];
+    distances[k] = 0;
+    let mut visited = vec![false; n + 1];
+    let mut pq = BinaryHeap::new();
+    pq.push((Reverse(0), k));
+    while let Some((Reverse(distance), u)) = pq.pop() {
+        if visited[u] {
+            continue;
+        }
+        for &(v, w) in &adjacency_list[u] {
+            let new_distance = w + distance;
+            if new_distance < distances[v] {
+                distances[v] = new_distance;
+                pq.push((Reverse(new_distance), v));
+            }
+        }
+        visited[u] = true;
     }
-    let dist = dijkstra(&graph, k);
-    let mut max = 0;
-    if dist.len() != n as usize {
+    if !visited[1..].iter().all(|&a| a) {
         return -1;
     }
-    for (_, cost) in dist {
-        if cost == i32::MAX {
-            return -1;
-        }
-        if cost != i32::MAX && cost != 0 {
-            max = cost.max(max);
-        }
-    }
-    if max == 0 {
-        return -1;
-    }
-    max
+    *distances[1..].iter().max().unwrap()
 }
+
 const NAME: &str = "network-delay-time";
 const LINK: &str = "https://leetcode.com/problems/network-delay-time/";
 
