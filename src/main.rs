@@ -16,6 +16,7 @@ mod dynamic_one;
 mod bitwise_operations;
 mod intervals;
 mod greedy;
+mod advanced_graphs;
 
 
 use utils::print_total;
@@ -41,5 +42,6 @@ fn main() {
     bitwise_operations::main();
     intervals::main();
     greedy::main();
+    advanced_graphs::main();
     print_total();
 }
