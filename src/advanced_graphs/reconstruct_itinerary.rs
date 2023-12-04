@@ -1,6 +1,6 @@
 use crate::utils::print_pass;
 
-use std::collections::{HashMap, VecDeque};
+use std::collections::HashMap;
 
 pub fn find_itinerary(tickets: Vec<Vec<String>>) -> Vec<String> {
     let mut graph: HashMap<String, Vec<String>> = HashMap::new();
